@@ -1,0 +1,12 @@
+C:\Users\Admin\Documents\FH\Sem 2\Prog2\Programme\DB Connection Test\DB Connection Test\bin\Debug\DB Connection Test.exe.config
+C:\Users\Admin\Documents\FH\Sem 2\Prog2\Programme\DB Connection Test\DB Connection Test\bin\Debug\DB Connection Test.exe
+C:\Users\Admin\Documents\FH\Sem 2\Prog2\Programme\DB Connection Test\DB Connection Test\bin\Debug\DB Connection Test.pdb
+C:\Users\Admin\Documents\FH\Sem 2\Prog2\Programme\DB Connection Test\DB Connection Test\obj\Debug\DB Connection Test.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\FH\Sem 2\Prog2\Programme\DB Connection Test\DB Connection Test\obj\Debug\DB Connection Test.exe
+C:\Users\Admin\Documents\FH\Sem 2\Prog2\Programme\DB Connection Test\DB Connection Test\obj\Debug\DB Connection Test.pdb
+C:\Users\Admin\Documents\FH\Sem 2\DB2\DB Connection Test\DB Connection Test\bin\Debug\DB Connection Test.exe.config
+C:\Users\Admin\Documents\FH\Sem 2\DB2\DB Connection Test\DB Connection Test\obj\Debug\DB Connection Test.exe
+C:\Users\Admin\Documents\FH\Sem 2\DB2\DB Connection Test\DB Connection Test\obj\Debug\DB Connection Test.pdb
+C:\Users\Admin\Desktop\DB Connection Test\DB Connection Test\bin\Debug\DB Connection Test.exe.config
+C:\Users\Admin\Desktop\DB Connection Test\DB Connection Test\obj\Debug\DB Connection Test.exe
+C:\Users\Admin\Desktop\DB Connection Test\DB Connection Test\obj\Debug\DB Connection Test.pdb
