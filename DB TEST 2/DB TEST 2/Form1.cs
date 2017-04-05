@@ -52,7 +52,6 @@ namespace DB_TEST_2
                 // Populate a new data table and bind it to the BindingSource.
                 DataTable table = new DataTable();
                 table.Locale = System.Globalization.CultureInfo.InvariantCulture;
-                dataAdapter.
                 dataAdapter.Fill(table);
                 bindingSource1.DataSource = table;
                 // Resize the DataGridView columns to fit the newly loaded content.
