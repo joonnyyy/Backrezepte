@@ -12,6 +12,7 @@ using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.Data.Common;
 
+
 namespace DB_TEST_2
 {
     public partial class Form1 : Form
@@ -21,20 +22,23 @@ namespace DB_TEST_2
             InitializeComponent();
         }
 
+        Form2 frm2 = new Form2();
+        String connectionString;
         private void button1_Click(object sender, EventArgs e)
         {
+            
             try
             {
                 BindingSource bindingSource1 = new BindingSource();
                 dataGridView1.DataSource = bindingSource1;
-                
+
 
 
                 // Specify a connection string. Replace the given value with a 
                 // valid connection string for a Northwind SQL Server sample
 
                 // database accessible to your system.
-                String connectionString = @"Server=192.168.56.101;Database=testdb;User Id=Admin;Password=12345678;";
+                connectionString = @"Server=192.168.56.101;Database=testdb;User Id=Admin;Password=12345678;";
                 string selectCommand = "Select * From test";
                 // Create a new data adapter based on the specified query.
                 SqlDataAdapter dataAdapter;
@@ -43,16 +47,18 @@ namespace DB_TEST_2
                 // Create a command builder to generate SQL update, insert, and
                 // delete commands based on selectCommand. These are used to
                 // update the database.
-                SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
+                //SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
 
                 // Populate a new data table and bind it to the BindingSource.
                 DataTable table = new DataTable();
                 table.Locale = System.Globalization.CultureInfo.InvariantCulture;
+                dataAdapter.
                 dataAdapter.Fill(table);
                 bindingSource1.DataSource = table;
                 // Resize the DataGridView columns to fit the newly loaded content.
                 dataGridView1.AutoResizeColumns(
                     DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
+                
             }
             catch (SqlException)
             {
@@ -61,7 +67,7 @@ namespace DB_TEST_2
                     "valid for your system.");
             }
         }
-
+        
         private void button2_Click(object sender, EventArgs e)
         {
             MessageBox.Show(dataGridView1.SelectedCells[0].Value.ToString());
@@ -69,14 +75,26 @@ namespace DB_TEST_2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            frm2.ShowDialog();
+            MessageBox.Show(frm2.uname);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            tabControl1.TabPages.Remove(tabPage1);
+            tabControl1.TabPages.Remove(tabPage2);
 
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            
+         
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
