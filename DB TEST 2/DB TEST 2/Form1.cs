@@ -66,5 +66,17 @@ namespace DB_TEST_2
         {
             MessageBox.Show(dataGridView1.SelectedCells[0].Value.ToString());
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            tabControl1.TabPages.Remove(tabPage1);
+
+
+        }
     }
 }
