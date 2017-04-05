@@ -6,7 +6,7 @@ namespace database_demo1
     class MainClass
     {
         public static void Main(string[] args)
-        {
+        {//lol
             // http://www.connectionstrings.com/sql-server/
             // use "." for local server like: '.\myInstanceName'
             string connectionString = @"Server=192.168.56.101;Database=testdb;User Id=Admin;Password=12345678;";
