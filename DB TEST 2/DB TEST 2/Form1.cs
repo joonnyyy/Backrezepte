@@ -32,6 +32,7 @@ namespace DB_TEST_2
 
                 // Specify a connection string. Replace the given value with a 
                 // valid connection string for a Northwind SQL Server sample
+
                 // database accessible to your system.
                 String connectionString = @"Server=192.168.56.101;Database=testdb;User Id=Admin;Password=12345678;";
                 string selectCommand = "Select * From test";
