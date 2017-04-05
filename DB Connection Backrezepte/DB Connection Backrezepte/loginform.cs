@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace DB_Connection_Backrezepte
 {
-    public partial class mainform : Form
+    public partial class loginform : Form
     {
-        public mainform()
+        public loginform()
         {
             InitializeComponent();
         }
 
-        private void mainform_Load(object sender, EventArgs e)
+        private void loginform_Load(object sender, EventArgs e)
         {
 
         }
