@@ -55,6 +55,29 @@ namespace DB_Connection_Backrezepte
 
         }
 
+        private void runcmd(string command)
+        {
+            try
+            {
+                using (SqlConnection openCon = new SqlConnection(connectionstring))
+                {
+                    //string saveStaff = "INSERT into tbl_staff (staffName,userID,idDepartment) VALUES (@staffName,@userID,@idDepartment)";
+
+                    using (SqlCommand querySaveStaff = new SqlCommand(command))
+                    {
+                        querySaveStaff.Connection = openCon;
+                        //querySaveStaff.Parameters.Add("@staffName", SqlDbType.VarChar, 30).Value = name;
+                        openCon.Open();
+
+
+                    }
+                }
+            }catch (Exception e)
+            {
+                MessageBox.Show("Fehler beim Ausführen des Befehles: \n" + e.Message);
+            }
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             fill("select * from "+ dgv1item + " where name like '%" + textBox1.Text + "%'",dataGridView1);

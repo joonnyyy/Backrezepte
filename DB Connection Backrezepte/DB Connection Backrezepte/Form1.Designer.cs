@@ -51,7 +51,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(411, 352);
             this.dataGridView1.TabIndex = 0;
             // 
             // dataGridView2
@@ -59,17 +59,17 @@
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(357, 38);
+            this.dataGridView2.Location = new System.Drawing.Point(429, 38);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView2.Size = new System.Drawing.Size(387, 352);
             this.dataGridView2.TabIndex = 1;
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(12, 12);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(240, 20);
+            this.textBox1.Size = new System.Drawing.Size(411, 20);
             this.textBox1.TabIndex = 2;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -77,10 +77,10 @@
             // 
             this.tabControl1.Controls.Add(this.tabPagevw);
             this.tabControl1.Controls.Add(this.tabPagebk);
-            this.tabControl1.Location = new System.Drawing.Point(12, 248);
+            this.tabControl1.Location = new System.Drawing.Point(12, 425);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(682, 210);
+            this.tabControl1.Size = new System.Drawing.Size(808, 80);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPagevw
@@ -88,7 +88,7 @@
             this.tabPagevw.Location = new System.Drawing.Point(4, 22);
             this.tabPagevw.Name = "tabPagevw";
             this.tabPagevw.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagevw.Size = new System.Drawing.Size(674, 184);
+            this.tabPagevw.Size = new System.Drawing.Size(800, 54);
             this.tabPagevw.TabIndex = 0;
             this.tabPagevw.Text = "Verwaltung";
             this.tabPagevw.UseVisualStyleBackColor = true;
@@ -105,7 +105,7 @@
             // 
             // btn_rezepte
             // 
-            this.btn_rezepte.Location = new System.Drawing.Point(12, 194);
+            this.btn_rezepte.Location = new System.Drawing.Point(12, 396);
             this.btn_rezepte.Name = "btn_rezepte";
             this.btn_rezepte.Size = new System.Drawing.Size(75, 23);
             this.btn_rezepte.TabIndex = 4;
@@ -115,7 +115,7 @@
             // 
             // btn_lager
             // 
-            this.btn_lager.Location = new System.Drawing.Point(93, 194);
+            this.btn_lager.Location = new System.Drawing.Point(93, 396);
             this.btn_lager.Name = "btn_lager";
             this.btn_lager.Size = new System.Drawing.Size(75, 23);
             this.btn_lager.TabIndex = 5;
@@ -125,7 +125,7 @@
             // 
             // btn_lieferanten
             // 
-            this.btn_lieferanten.Location = new System.Drawing.Point(174, 194);
+            this.btn_lieferanten.Location = new System.Drawing.Point(174, 396);
             this.btn_lieferanten.Name = "btn_lieferanten";
             this.btn_lieferanten.Size = new System.Drawing.Size(75, 23);
             this.btn_lieferanten.TabIndex = 6;
@@ -146,7 +146,6 @@
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Name = "mainform";
-            this.Text = "mainform";
             this.Load += new System.EventHandler(this.mainform_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
