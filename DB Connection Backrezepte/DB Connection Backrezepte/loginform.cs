@@ -22,19 +22,29 @@ namespace DB_Connection_Backrezepte
         private void loginform_Load(object sender, EventArgs e)
         {
             textBox2.PasswordChar = '*' ;
+            label4.Text = "";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string connectionstring = @"Server=" + textBox3.Text +";Database=testdb;User Id="+ textBox1.Text +";Password=" + textBox2.Text + ";";
+            login();
+        }
+
+
+        private void login()
+        {
+            label4.Text = "verbinde...";
+            Application.DoEvents();
+            string connectionstring = @"Server=" + textBox3.Text + ";Database=testdb;User Id=" + textBox1.Text + ";Password=" + textBox2.Text + ";";
             if (contest(connectionstring))
             {
                 mainform.connectionstring = connectionstring;
                 dontclose = true;
                 Close();
             }
+            label4.Text = "";
         }
-
+        
         static bool contest(string connectstring)
         {
             
@@ -49,16 +59,13 @@ namespace DB_Connection_Backrezepte
             }catch(Exception e)
             {
                 MessageBox.Show("Fehler bei der Anmeldung: " + e.Message);
-
-
                 return false;
             }
         }
 
         private void loginform_SizeChanged(object sender, EventArgs e)
         {
-            Height = 238;
-            Width = 214;
+
         }
 
         private void loginform_FormClosing(object sender, FormClosingEventArgs e)
@@ -68,6 +75,14 @@ namespace DB_Connection_Backrezepte
             Application.Exit();
             }
            
+        }
+
+        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                login();
+            }
         }
     }
 }
