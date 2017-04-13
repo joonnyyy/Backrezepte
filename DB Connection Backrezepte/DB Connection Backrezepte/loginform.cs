@@ -13,7 +13,7 @@ namespace DB_Connection_Backrezepte
 {
     public partial class loginform : Form
     {
-        static bool dontclose = false;
+        private static bool dontclose = false;
         public loginform()
         {
             InitializeComponent();
@@ -58,7 +58,7 @@ namespace DB_Connection_Backrezepte
                 return true;
             }catch(Exception e)
             {
-                MessageBox.Show("Fehler bei der Anmeldung: " + e.Message);
+                MessageBox.Show("Fehler bei der Anmeldung: \n" + e.Message);
                 return false;
             }
         }

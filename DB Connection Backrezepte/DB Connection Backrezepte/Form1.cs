@@ -25,5 +25,15 @@ namespace DB_Connection_Backrezepte
             lf.ShowDialog();
 
         }
+
+        private void fill1(string command)
+        {
+
+        }
+
+        private void fill2(string command)
+        {
+
+        }
     }
 }
