@@ -33,6 +33,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage_rezepte = new System.Windows.Forms.TabPage();
+            this.btn_rezepthinzu = new System.Windows.Forms.Button();
             this.tabPagebk = new System.Windows.Forms.TabPage();
             this.btn_rezepte = new System.Windows.Forms.Button();
             this.btn_lager = new System.Windows.Forms.Button();
@@ -41,7 +42,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btn_rezepthinzu = new System.Windows.Forms.Button();
+            this.tabPage_lager = new System.Windows.Forms.TabPage();
+            this.tabPage_lieferanten = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -68,6 +70,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(562, 64);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(254, 326);
             this.dataGridView2.TabIndex = 1;
             // 
@@ -83,6 +86,8 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage_rezepte);
             this.tabControl1.Controls.Add(this.tabPagebk);
+            this.tabControl1.Controls.Add(this.tabPage_lager);
+            this.tabControl1.Controls.Add(this.tabPage_lieferanten);
             this.tabControl1.Location = new System.Drawing.Point(12, 425);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -99,6 +104,16 @@
             this.tabPage_rezepte.TabIndex = 0;
             this.tabPage_rezepte.Text = "Rezepte";
             this.tabPage_rezepte.UseVisualStyleBackColor = true;
+            // 
+            // btn_rezepthinzu
+            // 
+            this.btn_rezepthinzu.Location = new System.Drawing.Point(6, 6);
+            this.btn_rezepthinzu.Name = "btn_rezepthinzu";
+            this.btn_rezepthinzu.Size = new System.Drawing.Size(105, 23);
+            this.btn_rezepthinzu.TabIndex = 0;
+            this.btn_rezepthinzu.Text = "Rezept hinzufügen";
+            this.btn_rezepthinzu.UseVisualStyleBackColor = true;
+            this.btn_rezepthinzu.Click += new System.EventHandler(this.btn_rezepthinzu_Click);
             // 
             // tabPagebk
             // 
@@ -177,15 +192,25 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Info:";
             // 
-            // btn_rezepthinzu
+            // tabPage_lager
             // 
-            this.btn_rezepthinzu.Location = new System.Drawing.Point(6, 6);
-            this.btn_rezepthinzu.Name = "btn_rezepthinzu";
-            this.btn_rezepthinzu.Size = new System.Drawing.Size(105, 23);
-            this.btn_rezepthinzu.TabIndex = 0;
-            this.btn_rezepthinzu.Text = "Rezept hinzufügen";
-            this.btn_rezepthinzu.UseVisualStyleBackColor = true;
-            this.btn_rezepthinzu.Click += new System.EventHandler(this.btn_rezepthinzu_Click);
+            this.tabPage_lager.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_lager.Name = "tabPage_lager";
+            this.tabPage_lager.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_lager.Size = new System.Drawing.Size(800, 54);
+            this.tabPage_lager.TabIndex = 2;
+            this.tabPage_lager.Text = "Lager";
+            this.tabPage_lager.UseVisualStyleBackColor = true;
+            // 
+            // tabPage_lieferanten
+            // 
+            this.tabPage_lieferanten.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_lieferanten.Name = "tabPage_lieferanten";
+            this.tabPage_lieferanten.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_lieferanten.Size = new System.Drawing.Size(800, 54);
+            this.tabPage_lieferanten.TabIndex = 3;
+            this.tabPage_lieferanten.Text = "Lieferanten";
+            this.tabPage_lieferanten.UseVisualStyleBackColor = true;
             // 
             // mainform
             // 
@@ -230,6 +255,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_rezepthinzu;
+        private System.Windows.Forms.TabPage tabPage_lager;
+        private System.Windows.Forms.TabPage tabPage_lieferanten;
     }
 }
 
