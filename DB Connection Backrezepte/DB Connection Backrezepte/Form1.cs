@@ -12,6 +12,7 @@ namespace DB_Connection_Backrezepte
 {
     public partial class mainform : Form
     {
+        public static string connectionstring;
         public mainform()
         {
             InitializeComponent();
@@ -20,7 +21,8 @@ namespace DB_Connection_Backrezepte
         private void mainform_Load(object sender, EventArgs e)
         {
 
-
+            loginform lf = new loginform();
+            lf.ShowDialog();
 
         }
     }
