@@ -59,7 +59,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(544, 326);
+            this.dataGridView1.Size = new System.Drawing.Size(762, 353);
             this.dataGridView1.TabIndex = 0;
             // 
             // dataGridView2
@@ -67,18 +67,18 @@
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(562, 64);
+            this.dataGridView2.Location = new System.Drawing.Point(791, 64);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(254, 326);
+            this.dataGridView2.Size = new System.Drawing.Size(399, 353);
             this.dataGridView2.TabIndex = 1;
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(12, 25);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(544, 20);
+            this.textBox1.Size = new System.Drawing.Size(646, 20);
             this.textBox1.TabIndex = 2;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -88,10 +88,10 @@
             this.tabControl1.Controls.Add(this.tabPagebk);
             this.tabControl1.Controls.Add(this.tabPage_lager);
             this.tabControl1.Controls.Add(this.tabPage_lieferanten);
-            this.tabControl1.Location = new System.Drawing.Point(12, 425);
+            this.tabControl1.Location = new System.Drawing.Point(12, 452);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(808, 80);
+            this.tabControl1.Size = new System.Drawing.Size(1178, 80);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage_rezepte
@@ -127,7 +127,7 @@
             // 
             // btn_rezepte
             // 
-            this.btn_rezepte.Location = new System.Drawing.Point(12, 396);
+            this.btn_rezepte.Location = new System.Drawing.Point(12, 423);
             this.btn_rezepte.Name = "btn_rezepte";
             this.btn_rezepte.Size = new System.Drawing.Size(75, 23);
             this.btn_rezepte.TabIndex = 4;
@@ -137,7 +137,7 @@
             // 
             // btn_lager
             // 
-            this.btn_lager.Location = new System.Drawing.Point(93, 396);
+            this.btn_lager.Location = new System.Drawing.Point(93, 423);
             this.btn_lager.Name = "btn_lager";
             this.btn_lager.Size = new System.Drawing.Size(75, 23);
             this.btn_lager.TabIndex = 5;
@@ -147,7 +147,7 @@
             // 
             // btn_lieferanten
             // 
-            this.btn_lieferanten.Location = new System.Drawing.Point(174, 396);
+            this.btn_lieferanten.Location = new System.Drawing.Point(174, 423);
             this.btn_lieferanten.Name = "btn_lieferanten";
             this.btn_lieferanten.Size = new System.Drawing.Size(75, 23);
             this.btn_lieferanten.TabIndex = 6;
@@ -157,7 +157,7 @@
             // 
             // btn_test_1
             // 
-            this.btn_test_1.Location = new System.Drawing.Point(347, 396);
+            this.btn_test_1.Location = new System.Drawing.Point(347, 423);
             this.btn_test_1.Name = "btn_test_1";
             this.btn_test_1.Size = new System.Drawing.Size(75, 23);
             this.btn_test_1.TabIndex = 7;
@@ -186,7 +186,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(562, 48);
+            this.label3.Location = new System.Drawing.Point(788, 48);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(28, 13);
             this.label3.TabIndex = 10;
@@ -207,7 +207,7 @@
             this.tabPage_lieferanten.Location = new System.Drawing.Point(4, 22);
             this.tabPage_lieferanten.Name = "tabPage_lieferanten";
             this.tabPage_lieferanten.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_lieferanten.Size = new System.Drawing.Size(800, 54);
+            this.tabPage_lieferanten.Size = new System.Drawing.Size(1170, 54);
             this.tabPage_lieferanten.TabIndex = 3;
             this.tabPage_lieferanten.Text = "Lieferanten";
             this.tabPage_lieferanten.UseVisualStyleBackColor = true;
@@ -216,7 +216,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(832, 517);
+            this.ClientSize = new System.Drawing.Size(1202, 544);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
