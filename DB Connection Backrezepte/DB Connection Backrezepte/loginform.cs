@@ -23,6 +23,8 @@ namespace DB_Connection_Backrezepte
         {
             textBox2.PasswordChar = '*' ;
             label4.Text = "";
+            textBox1.Text = "admin";
+            textBox2.Text = "12345678";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -35,7 +37,7 @@ namespace DB_Connection_Backrezepte
         {
             label4.Text = "verbinde...";
             Application.DoEvents();
-            string connectionstring = @"Server=" + textBox3.Text + ";Database=testdb;User Id=" + textBox1.Text + ";Password=" + textBox2.Text + ";";
+            string connectionstring = @"Server=" + textBox3.Text + ";Database=backrezepte;User Id=" + textBox1.Text + ";Password=" + textBox2.Text + ";";
             if (contest(connectionstring))
             {
                 mainform.connectionstring = connectionstring;
