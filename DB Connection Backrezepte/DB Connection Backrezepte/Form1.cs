@@ -55,7 +55,7 @@ namespace DB_Connection_Backrezepte
 
         }
 
-        private void runcmd(string command)
+        public static void runcmd(string command)
         {
             try
             {
@@ -63,12 +63,12 @@ namespace DB_Connection_Backrezepte
                 {
                     //string saveStaff = "INSERT into tbl_staff (staffName,userID,idDepartment) VALUES (@staffName,@userID,@idDepartment)";
 
-                    using (SqlCommand querySaveStaff = new SqlCommand(command))
+                    using (SqlCommand cmd = new SqlCommand(command))
                     {
-                        querySaveStaff.Connection = openCon;
+                        cmd.Connection = openCon;
                         //querySaveStaff.Parameters.Add("@staffName", SqlDbType.VarChar, 30).Value = name;
                         openCon.Open();
-
+                        cmd.ExecuteNonQuery();
 
                     }
                 }
@@ -99,6 +99,18 @@ namespace DB_Connection_Backrezepte
         {
             dgv1item = "lieferanten";
             fill("select * from " + dgv1item, dataGridView1);
+        }
+
+        private void btn_test_1_Click(object sender, EventArgs e)
+        {
+            dgv1item = "rezepte3";
+            fill("select * from " + dgv1item, dataGridView1);
+            //    runcmd("insert into rezepte (rnr,name) values (5,'test2')");
+        }
+
+        private void btn_rezepthinzu_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
