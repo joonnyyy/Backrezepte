@@ -21,6 +21,7 @@ namespace DB_Connection_Backrezepte
         public mainform()
         {
             InitializeComponent();
+
         }
 
         static bool IsNumeric(object Expression)
