@@ -41,6 +41,10 @@ namespace DB_Connection_Backrezepte
             if (contest(connectionstring))
             {
                 mainform.connectionstring = connectionstring;
+                if (textBox1.Text.StartsWith("b_"))
+                {
+                    mainform.verwaltung = false;
+                }
                 dontclose = true;
                 Close();
             }

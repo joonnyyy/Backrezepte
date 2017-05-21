@@ -33,8 +33,11 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage_rezepte = new System.Windows.Forms.TabPage();
+            this.btn_rezeptentf = new System.Windows.Forms.Button();
             this.btn_rezepthinzu = new System.Windows.Forms.Button();
             this.tabPagebk = new System.Windows.Forms.TabPage();
+            this.tabPage_lager = new System.Windows.Forms.TabPage();
+            this.tabPage_lieferanten = new System.Windows.Forms.TabPage();
             this.btn_rezepte = new System.Windows.Forms.Button();
             this.btn_lager = new System.Windows.Forms.Button();
             this.btn_lieferanten = new System.Windows.Forms.Button();
@@ -42,12 +45,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.tabPage_lager = new System.Windows.Forms.TabPage();
-            this.tabPage_lieferanten = new System.Windows.Forms.TabPage();
+            this.btn_zutatenfurrezept = new System.Windows.Forms.Button();
+            this.btn_b_rezepteanz = new System.Windows.Forms.Button();
+            this.btn_b_showzutaten = new System.Windows.Forms.Button();
+            this.btn_b_mengebrechnen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage_rezepte.SuspendLayout();
+            this.tabPagebk.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -96,14 +102,26 @@
             // 
             // tabPage_rezepte
             // 
+            this.tabPage_rezepte.Controls.Add(this.btn_zutatenfurrezept);
+            this.tabPage_rezepte.Controls.Add(this.btn_rezeptentf);
             this.tabPage_rezepte.Controls.Add(this.btn_rezepthinzu);
             this.tabPage_rezepte.Location = new System.Drawing.Point(4, 22);
             this.tabPage_rezepte.Name = "tabPage_rezepte";
             this.tabPage_rezepte.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_rezepte.Size = new System.Drawing.Size(800, 54);
+            this.tabPage_rezepte.Size = new System.Drawing.Size(1170, 54);
             this.tabPage_rezepte.TabIndex = 0;
             this.tabPage_rezepte.Text = "Rezepte";
             this.tabPage_rezepte.UseVisualStyleBackColor = true;
+            // 
+            // btn_rezeptentf
+            // 
+            this.btn_rezeptentf.Location = new System.Drawing.Point(117, 6);
+            this.btn_rezeptentf.Name = "btn_rezeptentf";
+            this.btn_rezeptentf.Size = new System.Drawing.Size(99, 23);
+            this.btn_rezeptentf.TabIndex = 1;
+            this.btn_rezeptentf.Text = "Rezept entfernen";
+            this.btn_rezeptentf.UseVisualStyleBackColor = true;
+            this.btn_rezeptentf.Click += new System.EventHandler(this.btn_rezeptentf_Click);
             // 
             // btn_rezepthinzu
             // 
@@ -117,13 +135,36 @@
             // 
             // tabPagebk
             // 
+            this.tabPagebk.Controls.Add(this.btn_b_mengebrechnen);
+            this.tabPagebk.Controls.Add(this.btn_b_showzutaten);
+            this.tabPagebk.Controls.Add(this.btn_b_rezepteanz);
             this.tabPagebk.Location = new System.Drawing.Point(4, 22);
             this.tabPagebk.Name = "tabPagebk";
             this.tabPagebk.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagebk.Size = new System.Drawing.Size(800, 54);
+            this.tabPagebk.Size = new System.Drawing.Size(1170, 54);
             this.tabPagebk.TabIndex = 1;
             this.tabPagebk.Text = "Bäcker";
             this.tabPagebk.UseVisualStyleBackColor = true;
+            // 
+            // tabPage_lager
+            // 
+            this.tabPage_lager.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_lager.Name = "tabPage_lager";
+            this.tabPage_lager.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_lager.Size = new System.Drawing.Size(1170, 54);
+            this.tabPage_lager.TabIndex = 2;
+            this.tabPage_lager.Text = "Lager";
+            this.tabPage_lager.UseVisualStyleBackColor = true;
+            // 
+            // tabPage_lieferanten
+            // 
+            this.tabPage_lieferanten.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_lieferanten.Name = "tabPage_lieferanten";
+            this.tabPage_lieferanten.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_lieferanten.Size = new System.Drawing.Size(1170, 54);
+            this.tabPage_lieferanten.TabIndex = 3;
+            this.tabPage_lieferanten.Text = "Lieferanten";
+            this.tabPage_lieferanten.UseVisualStyleBackColor = true;
             // 
             // btn_rezepte
             // 
@@ -192,25 +233,45 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Info:";
             // 
-            // tabPage_lager
+            // btn_zutatenfurrezept
             // 
-            this.tabPage_lager.Location = new System.Drawing.Point(4, 22);
-            this.tabPage_lager.Name = "tabPage_lager";
-            this.tabPage_lager.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_lager.Size = new System.Drawing.Size(800, 54);
-            this.tabPage_lager.TabIndex = 2;
-            this.tabPage_lager.Text = "Lager";
-            this.tabPage_lager.UseVisualStyleBackColor = true;
+            this.btn_zutatenfurrezept.Location = new System.Drawing.Point(222, 6);
+            this.btn_zutatenfurrezept.Name = "btn_zutatenfurrezept";
+            this.btn_zutatenfurrezept.Size = new System.Drawing.Size(167, 23);
+            this.btn_zutatenfurrezept.TabIndex = 2;
+            this.btn_zutatenfurrezept.Text = "Zutaten des Rezeptes anzeigen";
+            this.btn_zutatenfurrezept.UseVisualStyleBackColor = true;
+            this.btn_zutatenfurrezept.Click += new System.EventHandler(this.btn_zutatenfurrezept_Click);
             // 
-            // tabPage_lieferanten
+            // btn_b_rezepteanz
             // 
-            this.tabPage_lieferanten.Location = new System.Drawing.Point(4, 22);
-            this.tabPage_lieferanten.Name = "tabPage_lieferanten";
-            this.tabPage_lieferanten.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_lieferanten.Size = new System.Drawing.Size(1170, 54);
-            this.tabPage_lieferanten.TabIndex = 3;
-            this.tabPage_lieferanten.Text = "Lieferanten";
-            this.tabPage_lieferanten.UseVisualStyleBackColor = true;
+            this.btn_b_rezepteanz.Location = new System.Drawing.Point(6, 6);
+            this.btn_b_rezepteanz.Name = "btn_b_rezepteanz";
+            this.btn_b_rezepteanz.Size = new System.Drawing.Size(105, 23);
+            this.btn_b_rezepteanz.TabIndex = 0;
+            this.btn_b_rezepteanz.Text = "Rezepte anzeigen";
+            this.btn_b_rezepteanz.UseVisualStyleBackColor = true;
+            this.btn_b_rezepteanz.Click += new System.EventHandler(this.btn_b_rezepteanz_Click);
+            // 
+            // btn_b_showzutaten
+            // 
+            this.btn_b_showzutaten.Location = new System.Drawing.Point(117, 6);
+            this.btn_b_showzutaten.Name = "btn_b_showzutaten";
+            this.btn_b_showzutaten.Size = new System.Drawing.Size(125, 23);
+            this.btn_b_showzutaten.TabIndex = 1;
+            this.btn_b_showzutaten.Text = "Zutaten des Rezeptes anzeigen";
+            this.btn_b_showzutaten.UseVisualStyleBackColor = true;
+            this.btn_b_showzutaten.Click += new System.EventHandler(this.btn_b_showzutaten_Click);
+            // 
+            // btn_b_mengebrechnen
+            // 
+            this.btn_b_mengebrechnen.Location = new System.Drawing.Point(248, 6);
+            this.btn_b_mengebrechnen.Name = "btn_b_mengebrechnen";
+            this.btn_b_mengebrechnen.Size = new System.Drawing.Size(148, 23);
+            this.btn_b_mengebrechnen.TabIndex = 2;
+            this.btn_b_mengebrechnen.Text = "Menge für x Stk. berechnen";
+            this.btn_b_mengebrechnen.UseVisualStyleBackColor = true;
+            this.btn_b_mengebrechnen.Click += new System.EventHandler(this.btn_b_mengebrechnen_Click);
             // 
             // mainform
             // 
@@ -234,6 +295,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage_rezepte.ResumeLayout(false);
+            this.tabPagebk.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,6 +319,11 @@
         private System.Windows.Forms.Button btn_rezepthinzu;
         private System.Windows.Forms.TabPage tabPage_lager;
         private System.Windows.Forms.TabPage tabPage_lieferanten;
+        private System.Windows.Forms.Button btn_rezeptentf;
+        private System.Windows.Forms.Button btn_zutatenfurrezept;
+        private System.Windows.Forms.Button btn_b_rezepteanz;
+        private System.Windows.Forms.Button btn_b_showzutaten;
+        private System.Windows.Forms.Button btn_b_mengebrechnen;
     }
 }
 

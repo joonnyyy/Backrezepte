@@ -40,7 +40,7 @@ namespace DB_Connection_Backrezepte
 
         private void mainform_Load(object sender, EventArgs e)
         {
-
+     
             loginform lf = new loginform();
             lf.ShowDialog();
             removealltp();
@@ -53,6 +53,7 @@ namespace DB_Connection_Backrezepte
                 btn_lieferanten.Enabled = false;
                 btn_lieferanten.Visible = false;
                 tabControl1.TabPages.Add(tabPagebk);
+                showrzepte();
             }
         }
 
@@ -119,12 +120,17 @@ namespace DB_Connection_Backrezepte
 
         private void btn_rezepte_Click(object sender, EventArgs e)
         {
-            dgv1item = "rezepte";
-            fill("select * from " + dgv1item, dataGridView1);
+            showrzepte();
             removealltp();
             tabControl1.TabPages.Add(tabPage_rezepte);
         }
 
+        private void showrzepte()
+        {
+            dgv1item = "rezepte";
+            fill("select * from " + dgv1item, dataGridView1);
+        }
+        
         private void btn_lager_Click(object sender, EventArgs e)
         {
             dgv1item = "zutaten";
@@ -170,6 +176,51 @@ namespace DB_Connection_Backrezepte
             }
            
 
+        }
+
+        private void btn_rezeptentf_Click(object sender, EventArgs e)
+        {
+            string nr = dataGridView1.SelectedCells[0].Value.ToString();
+                if (MessageBox.Show("Sind sie sicher,dass sie das Rezept und alle davon abhängigen Informationen löschen wollen?","",MessageBoxButtons.YesNo) == DialogResult.Yes) 
+                {
+                    runcmd("BEGIN TRAN \r\ndelete from bestehtaus where rnr = " + nr + "\r\ndelete from rezepte where rnr = " + nr + "\r\n COMMIT TRAN");
+                    //runcmd("delete from rezepte where rnr = " + nr);
+                }
+         }
+
+        private void btn_zutatenfurrezept_Click(object sender, EventArgs e)
+        {
+            showzutaten();
+        }
+
+        private void showzutaten()
+        {
+            string nr = dataGridView1.SelectedCells[0].Value.ToString();
+            fill("select zutaten.znr,zutaten.name,bestehtaus.menge100 as 'Menge pro 100 Stk.' from zutaten join bestehtaus on zutaten.znr = bestehtaus.znr where bestehtaus.rnr = " + nr, dataGridView2);
+
+        }
+
+        private void btn_b_rezepteanz_Click(object sender, EventArgs e)
+        {
+            showrzepte();
+        }
+
+        private void btn_b_showzutaten_Click(object sender, EventArgs e)
+        {
+            showzutaten();
+        }
+
+        private void btn_b_mengebrechnen_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int stk = Convert.ToInt32( Microsoft.VisualBasic.Interaction.InputBox("Geben Sie die gewünschte Anzahl an Stk. ein:"));
+                fill("",dataGridView2);
+            }
+         catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
