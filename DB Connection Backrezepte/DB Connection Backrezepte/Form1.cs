@@ -215,12 +215,54 @@ namespace DB_Connection_Backrezepte
             try
             {
                 int stk = Convert.ToInt32( Microsoft.VisualBasic.Interaction.InputBox("Geben Sie die gewünschte Anzahl an Stk. ein:"));
-                fill("",dataGridView2);
+                string nr = dataGridView1.SelectedCells[0].Value.ToString();
+                fill("select zutaten.znr,zutaten.name,CEILING((bestehtaus.menge100  / 100) * " + stk + ")  as 'Menge pro 100 Stk.' from zutaten join bestehtaus on zutaten.znr = bestehtaus.znr where bestehtaus.rnr = " + nr, dataGridView2);
+                if ((MessageBox.Show("Möchten Sie die brechneten Zutaten aus dem Lager entnemen ?","", MessageBoxButtons.YesNo) == DialogResult.Yes) && (MessageBox.Show("Sind Sie sicher, dass sie die Zutaten entnehmen wollen?","",MessageBoxButtons.YesNo) == DialogResult.Yes))
+                {
+                    string str = "BEGIN TRAN\r\n";
+                    
+                    for(int i =0; i < dataGridView2.RowCount; i++){
+
+                      // MessageBox.Show( dataGridView2.Rows[i].Cells[0].Value.ToString());
+                        string id = dataGridView2.Rows[i].Cells[0].Value.ToString();
+                        string value = dataGridView2.Rows[i].Cells[2].Value.ToString();
+                       str += "update zutaten set bestand = bestand - " + value + " where znr = "+ id + "\r\n";
+                    }
+                    str += "COMMIT TRAN";
+                   runcmd(str);
+
+                }
             }
          catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btn_zutatenzurezepthinzu_Click(object sender, EventArgs e)
+        {
+            fill("select * from zutaten",dataGridView2);
+            string nr = dataGridView1.SelectedCells[0].Value.ToString();
+            string zutat = Microsoft.VisualBasic.Interaction.InputBox("Geben Sie die Nummer der zutat ein:");
+            string anz = Microsoft.VisualBasic.Interaction.InputBox("Geben Sie die Menge pro 100 Stk :");
+            if (zutat != "" && anz != "")
+            {
+            runcmd("insert into bestehtaus values (" + nr + "," + zutat + "," + anz + ")");
+            }
+         
+        }
+
+        private void btn_zutatausrezeptentf_Click(object sender, EventArgs e)
+        {
+            showzutaten();
+            string nr = dataGridView1.SelectedCells[0].Value.ToString();
+            string zutat = Microsoft.VisualBasic.Interaction.InputBox("Geben Sie die Nummer der zutat ein:");
+
+            if (zutat != "")
+            {
+                runcmd("delete from bestehtaus where rnr = " + nr + " znr = " +zutat);
+            }
+
         }
     }
 }

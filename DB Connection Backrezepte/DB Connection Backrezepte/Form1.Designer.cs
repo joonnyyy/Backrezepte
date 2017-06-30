@@ -33,9 +33,13 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage_rezepte = new System.Windows.Forms.TabPage();
+            this.btn_zutatenfurrezept = new System.Windows.Forms.Button();
             this.btn_rezeptentf = new System.Windows.Forms.Button();
             this.btn_rezepthinzu = new System.Windows.Forms.Button();
             this.tabPagebk = new System.Windows.Forms.TabPage();
+            this.btn_b_mengebrechnen = new System.Windows.Forms.Button();
+            this.btn_b_showzutaten = new System.Windows.Forms.Button();
+            this.btn_b_rezepteanz = new System.Windows.Forms.Button();
             this.tabPage_lager = new System.Windows.Forms.TabPage();
             this.tabPage_lieferanten = new System.Windows.Forms.TabPage();
             this.btn_rezepte = new System.Windows.Forms.Button();
@@ -45,10 +49,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btn_zutatenfurrezept = new System.Windows.Forms.Button();
-            this.btn_b_rezepteanz = new System.Windows.Forms.Button();
-            this.btn_b_showzutaten = new System.Windows.Forms.Button();
-            this.btn_b_mengebrechnen = new System.Windows.Forms.Button();
+            this.btn_zutatenzurezepthinzu = new System.Windows.Forms.Button();
+            this.btn_zutatausrezeptentf = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -102,6 +104,8 @@
             // 
             // tabPage_rezepte
             // 
+            this.tabPage_rezepte.Controls.Add(this.btn_zutatausrezeptentf);
+            this.tabPage_rezepte.Controls.Add(this.btn_zutatenzurezepthinzu);
             this.tabPage_rezepte.Controls.Add(this.btn_zutatenfurrezept);
             this.tabPage_rezepte.Controls.Add(this.btn_rezeptentf);
             this.tabPage_rezepte.Controls.Add(this.btn_rezepthinzu);
@@ -112,6 +116,16 @@
             this.tabPage_rezepte.TabIndex = 0;
             this.tabPage_rezepte.Text = "Rezepte";
             this.tabPage_rezepte.UseVisualStyleBackColor = true;
+            // 
+            // btn_zutatenfurrezept
+            // 
+            this.btn_zutatenfurrezept.Location = new System.Drawing.Point(222, 6);
+            this.btn_zutatenfurrezept.Name = "btn_zutatenfurrezept";
+            this.btn_zutatenfurrezept.Size = new System.Drawing.Size(167, 23);
+            this.btn_zutatenfurrezept.TabIndex = 2;
+            this.btn_zutatenfurrezept.Text = "Zutaten des Rezeptes anzeigen";
+            this.btn_zutatenfurrezept.UseVisualStyleBackColor = true;
+            this.btn_zutatenfurrezept.Click += new System.EventHandler(this.btn_zutatenfurrezept_Click);
             // 
             // btn_rezeptentf
             // 
@@ -145,6 +159,36 @@
             this.tabPagebk.TabIndex = 1;
             this.tabPagebk.Text = "Bäcker";
             this.tabPagebk.UseVisualStyleBackColor = true;
+            // 
+            // btn_b_mengebrechnen
+            // 
+            this.btn_b_mengebrechnen.Location = new System.Drawing.Point(248, 6);
+            this.btn_b_mengebrechnen.Name = "btn_b_mengebrechnen";
+            this.btn_b_mengebrechnen.Size = new System.Drawing.Size(148, 23);
+            this.btn_b_mengebrechnen.TabIndex = 2;
+            this.btn_b_mengebrechnen.Text = "Menge für x Stk. berechnen";
+            this.btn_b_mengebrechnen.UseVisualStyleBackColor = true;
+            this.btn_b_mengebrechnen.Click += new System.EventHandler(this.btn_b_mengebrechnen_Click);
+            // 
+            // btn_b_showzutaten
+            // 
+            this.btn_b_showzutaten.Location = new System.Drawing.Point(117, 6);
+            this.btn_b_showzutaten.Name = "btn_b_showzutaten";
+            this.btn_b_showzutaten.Size = new System.Drawing.Size(125, 23);
+            this.btn_b_showzutaten.TabIndex = 1;
+            this.btn_b_showzutaten.Text = "Zutaten des Rezeptes anzeigen";
+            this.btn_b_showzutaten.UseVisualStyleBackColor = true;
+            this.btn_b_showzutaten.Click += new System.EventHandler(this.btn_b_showzutaten_Click);
+            // 
+            // btn_b_rezepteanz
+            // 
+            this.btn_b_rezepteanz.Location = new System.Drawing.Point(6, 6);
+            this.btn_b_rezepteanz.Name = "btn_b_rezepteanz";
+            this.btn_b_rezepteanz.Size = new System.Drawing.Size(105, 23);
+            this.btn_b_rezepteanz.TabIndex = 0;
+            this.btn_b_rezepteanz.Text = "Rezepte anzeigen";
+            this.btn_b_rezepteanz.UseVisualStyleBackColor = true;
+            this.btn_b_rezepteanz.Click += new System.EventHandler(this.btn_b_rezepteanz_Click);
             // 
             // tabPage_lager
             // 
@@ -233,45 +277,25 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Info:";
             // 
-            // btn_zutatenfurrezept
+            // btn_zutatenzurezepthinzu
             // 
-            this.btn_zutatenfurrezept.Location = new System.Drawing.Point(222, 6);
-            this.btn_zutatenfurrezept.Name = "btn_zutatenfurrezept";
-            this.btn_zutatenfurrezept.Size = new System.Drawing.Size(167, 23);
-            this.btn_zutatenfurrezept.TabIndex = 2;
-            this.btn_zutatenfurrezept.Text = "Zutaten des Rezeptes anzeigen";
-            this.btn_zutatenfurrezept.UseVisualStyleBackColor = true;
-            this.btn_zutatenfurrezept.Click += new System.EventHandler(this.btn_zutatenfurrezept_Click);
+            this.btn_zutatenzurezepthinzu.Location = new System.Drawing.Point(395, 6);
+            this.btn_zutatenzurezepthinzu.Name = "btn_zutatenzurezepthinzu";
+            this.btn_zutatenzurezepthinzu.Size = new System.Drawing.Size(154, 23);
+            this.btn_zutatenzurezepthinzu.TabIndex = 3;
+            this.btn_zutatenzurezepthinzu.Text = "Zutat zu Rezept hinzufügen";
+            this.btn_zutatenzurezepthinzu.UseVisualStyleBackColor = true;
+            this.btn_zutatenzurezepthinzu.Click += new System.EventHandler(this.btn_zutatenzurezepthinzu_Click);
             // 
-            // btn_b_rezepteanz
+            // btn_zutatausrezeptentf
             // 
-            this.btn_b_rezepteanz.Location = new System.Drawing.Point(6, 6);
-            this.btn_b_rezepteanz.Name = "btn_b_rezepteanz";
-            this.btn_b_rezepteanz.Size = new System.Drawing.Size(105, 23);
-            this.btn_b_rezepteanz.TabIndex = 0;
-            this.btn_b_rezepteanz.Text = "Rezepte anzeigen";
-            this.btn_b_rezepteanz.UseVisualStyleBackColor = true;
-            this.btn_b_rezepteanz.Click += new System.EventHandler(this.btn_b_rezepteanz_Click);
-            // 
-            // btn_b_showzutaten
-            // 
-            this.btn_b_showzutaten.Location = new System.Drawing.Point(117, 6);
-            this.btn_b_showzutaten.Name = "btn_b_showzutaten";
-            this.btn_b_showzutaten.Size = new System.Drawing.Size(125, 23);
-            this.btn_b_showzutaten.TabIndex = 1;
-            this.btn_b_showzutaten.Text = "Zutaten des Rezeptes anzeigen";
-            this.btn_b_showzutaten.UseVisualStyleBackColor = true;
-            this.btn_b_showzutaten.Click += new System.EventHandler(this.btn_b_showzutaten_Click);
-            // 
-            // btn_b_mengebrechnen
-            // 
-            this.btn_b_mengebrechnen.Location = new System.Drawing.Point(248, 6);
-            this.btn_b_mengebrechnen.Name = "btn_b_mengebrechnen";
-            this.btn_b_mengebrechnen.Size = new System.Drawing.Size(148, 23);
-            this.btn_b_mengebrechnen.TabIndex = 2;
-            this.btn_b_mengebrechnen.Text = "Menge für x Stk. berechnen";
-            this.btn_b_mengebrechnen.UseVisualStyleBackColor = true;
-            this.btn_b_mengebrechnen.Click += new System.EventHandler(this.btn_b_mengebrechnen_Click);
+            this.btn_zutatausrezeptentf.Location = new System.Drawing.Point(556, 5);
+            this.btn_zutatausrezeptentf.Name = "btn_zutatausrezeptentf";
+            this.btn_zutatausrezeptentf.Size = new System.Drawing.Size(162, 23);
+            this.btn_zutatausrezeptentf.TabIndex = 4;
+            this.btn_zutatausrezeptentf.Text = "Zutaten aus Rezept entfernen";
+            this.btn_zutatausrezeptentf.UseVisualStyleBackColor = true;
+            this.btn_zutatausrezeptentf.Click += new System.EventHandler(this.btn_zutatausrezeptentf_Click);
             // 
             // mainform
             // 
@@ -324,6 +348,8 @@
         private System.Windows.Forms.Button btn_b_rezepteanz;
         private System.Windows.Forms.Button btn_b_showzutaten;
         private System.Windows.Forms.Button btn_b_mengebrechnen;
+        private System.Windows.Forms.Button btn_zutatenzurezepthinzu;
+        private System.Windows.Forms.Button btn_zutatausrezeptentf;
     }
 }
 
