@@ -283,5 +283,46 @@ namespace DB_Connection_Backrezepte
             runcmd("update zutaten set bestand = bestand + " + plusbestand + "where znr = " + nr);
 
         }
+
+        private void btn_bestellen_Click(object sender, EventArgs e)
+        {
+            fill("select * from zutaten where bestand < meldebestand",dataGridView2);
+        }
+
+        private void btn_lieferanthinzu_Click(object sender, EventArgs e)
+        {
+            string nr = Microsoft.VisualBasic.Interaction.InputBox("Geben Sie eine Nummer für den Lieferanten ein:");
+            string name = Microsoft.VisualBasic.Interaction.InputBox("Geben Sie den Namen des Lieferanten ein:");
+            string tel = Microsoft.VisualBasic.Interaction.InputBox("Geben Sie die Telefonnummer des Lieferanten ein:");
+            string mail = Microsoft.VisualBasic.Interaction.InputBox("Geben Sie die E-Mail Adresse des Lieferanten ein(wenn vorhanden):");
+            string plz = Microsoft.VisualBasic.Interaction.InputBox("Geben Sie die PLZ Adresse des Lieferanten ein:");
+            string strasse = Microsoft.VisualBasic.Interaction.InputBox("Geben Sie die Strasse des Lieferanten ein(wenn vorhanden):");
+
+            if (nr != "" && name != "" )
+            {
+
+                    runcmd("insert into lieferanten values (" + nr + ",'" + name + "'," + tel + ",'" + mail + " '," + plz + ",'" + strasse + " ')");
+            }
+        }
+
+        private void btn_lieferantenentf_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Sind sie sicher, dass sie den ausgewählten Lieferanten und alle damit verbundenen daten löschen wollen?","",MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                string nr = dataGridView1.SelectedCells[0].Value.ToString();
+                runcmd("BEGIN TRAN \r\ndelete from liefert where lnr = " + nr + "\r\ndelete from lieferanten where lnr = " + nr + "\r\n COMMIT TRAN");
+            }
+
+        }
+
+        private void btn_werliefertwas_Click(object sender, EventArgs e)
+        {
+            fill("select * from zutaten", dataGridView2);
+            string nr = Microsoft.VisualBasic.Interaction.InputBox("Geben Sie eine Nummer für die Zutat ein:");
+            if (nr != "")
+            {
+                fill("select lieferanten.lnr,lieferanten.name,lieferanten.tel,lieferanten.email,lieferanten.plz,lieferanten.strasse from lieferanten join liefert on lieferanten.lnr = liefert.lnr where znr = " + nr, dataGridView2);
+            }
+        }
     }
 }

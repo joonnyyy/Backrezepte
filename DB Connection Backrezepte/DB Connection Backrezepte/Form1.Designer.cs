@@ -33,6 +33,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage_rezepte = new System.Windows.Forms.TabPage();
+            this.btn_zutatausrezeptentf = new System.Windows.Forms.Button();
+            this.btn_zutatenzurezepthinzu = new System.Windows.Forms.Button();
             this.btn_zutatenfurrezept = new System.Windows.Forms.Button();
             this.btn_rezeptentf = new System.Windows.Forms.Button();
             this.btn_rezepthinzu = new System.Windows.Forms.Button();
@@ -41,6 +43,8 @@
             this.btn_b_showzutaten = new System.Windows.Forms.Button();
             this.btn_b_rezepteanz = new System.Windows.Forms.Button();
             this.tabPage_lager = new System.Windows.Forms.TabPage();
+            this.btn_lieferung = new System.Windows.Forms.Button();
+            this.btn_zutathinzu = new System.Windows.Forms.Button();
             this.tabPage_lieferanten = new System.Windows.Forms.TabPage();
             this.btn_rezepte = new System.Windows.Forms.Button();
             this.btn_lager = new System.Windows.Forms.Button();
@@ -49,44 +53,52 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btn_zutatenzurezepthinzu = new System.Windows.Forms.Button();
-            this.btn_zutatausrezeptentf = new System.Windows.Forms.Button();
-            this.btn_zutathinzu = new System.Windows.Forms.Button();
-            this.btn_lieferung = new System.Windows.Forms.Button();
+            this.btn_bestellen = new System.Windows.Forms.Button();
+            this.btn_lieferanthinzu = new System.Windows.Forms.Button();
+            this.btn_lieferantenentf = new System.Windows.Forms.Button();
+            this.btn_werliefertwas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage_rezepte.SuspendLayout();
             this.tabPagebk.SuspendLayout();
             this.tabPage_lager.SuspendLayout();
+            this.tabPage_lieferanten.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 64);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(762, 353);
+            this.dataGridView1.Size = new System.Drawing.Size(646, 413);
             this.dataGridView1.TabIndex = 0;
             // 
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(791, 64);
+            this.dataGridView2.Location = new System.Drawing.Point(676, 64);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(399, 353);
+            this.dataGridView2.Size = new System.Drawing.Size(506, 412);
             this.dataGridView2.TabIndex = 1;
             // 
             // textBox1
             // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(12, 25);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(646, 20);
@@ -99,10 +111,11 @@
             this.tabControl1.Controls.Add(this.tabPagebk);
             this.tabControl1.Controls.Add(this.tabPage_lager);
             this.tabControl1.Controls.Add(this.tabPage_lieferanten);
-            this.tabControl1.Location = new System.Drawing.Point(12, 452);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tabControl1.Location = new System.Drawing.Point(0, 512);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1178, 80);
+            this.tabControl1.Size = new System.Drawing.Size(1194, 80);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage_rezepte
@@ -115,10 +128,30 @@
             this.tabPage_rezepte.Location = new System.Drawing.Point(4, 22);
             this.tabPage_rezepte.Name = "tabPage_rezepte";
             this.tabPage_rezepte.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_rezepte.Size = new System.Drawing.Size(1170, 54);
+            this.tabPage_rezepte.Size = new System.Drawing.Size(1186, 54);
             this.tabPage_rezepte.TabIndex = 0;
             this.tabPage_rezepte.Text = "Rezepte";
             this.tabPage_rezepte.UseVisualStyleBackColor = true;
+            // 
+            // btn_zutatausrezeptentf
+            // 
+            this.btn_zutatausrezeptentf.Location = new System.Drawing.Point(556, 5);
+            this.btn_zutatausrezeptentf.Name = "btn_zutatausrezeptentf";
+            this.btn_zutatausrezeptentf.Size = new System.Drawing.Size(162, 23);
+            this.btn_zutatausrezeptentf.TabIndex = 4;
+            this.btn_zutatausrezeptentf.Text = "Zutaten aus Rezept entfernen";
+            this.btn_zutatausrezeptentf.UseVisualStyleBackColor = true;
+            this.btn_zutatausrezeptentf.Click += new System.EventHandler(this.btn_zutatausrezeptentf_Click);
+            // 
+            // btn_zutatenzurezepthinzu
+            // 
+            this.btn_zutatenzurezepthinzu.Location = new System.Drawing.Point(395, 6);
+            this.btn_zutatenzurezepthinzu.Name = "btn_zutatenzurezepthinzu";
+            this.btn_zutatenzurezepthinzu.Size = new System.Drawing.Size(154, 23);
+            this.btn_zutatenzurezepthinzu.TabIndex = 3;
+            this.btn_zutatenzurezepthinzu.Text = "Zutat zu Rezept hinzufügen";
+            this.btn_zutatenzurezepthinzu.UseVisualStyleBackColor = true;
+            this.btn_zutatenzurezepthinzu.Click += new System.EventHandler(this.btn_zutatenzurezepthinzu_Click);
             // 
             // btn_zutatenfurrezept
             // 
@@ -158,7 +191,7 @@
             this.tabPagebk.Location = new System.Drawing.Point(4, 22);
             this.tabPagebk.Name = "tabPagebk";
             this.tabPagebk.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagebk.Size = new System.Drawing.Size(1170, 54);
+            this.tabPagebk.Size = new System.Drawing.Size(1186, 54);
             this.tabPagebk.TabIndex = 1;
             this.tabPagebk.Text = "Bäcker";
             this.tabPagebk.UseVisualStyleBackColor = true;
@@ -195,59 +228,86 @@
             // 
             // tabPage_lager
             // 
+            this.tabPage_lager.Controls.Add(this.btn_bestellen);
             this.tabPage_lager.Controls.Add(this.btn_lieferung);
             this.tabPage_lager.Controls.Add(this.btn_zutathinzu);
             this.tabPage_lager.Location = new System.Drawing.Point(4, 22);
             this.tabPage_lager.Name = "tabPage_lager";
             this.tabPage_lager.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_lager.Size = new System.Drawing.Size(1170, 54);
+            this.tabPage_lager.Size = new System.Drawing.Size(1186, 54);
             this.tabPage_lager.TabIndex = 2;
             this.tabPage_lager.Text = "Lager";
             this.tabPage_lager.UseVisualStyleBackColor = true;
             // 
+            // btn_lieferung
+            // 
+            this.btn_lieferung.Location = new System.Drawing.Point(123, 6);
+            this.btn_lieferung.Name = "btn_lieferung";
+            this.btn_lieferung.Size = new System.Drawing.Size(221, 23);
+            this.btn_lieferung.TabIndex = 1;
+            this.btn_lieferung.Text = "Lieferung für ausgewählte Zutat hinzufügen";
+            this.btn_lieferung.UseVisualStyleBackColor = true;
+            this.btn_lieferung.Click += new System.EventHandler(this.btn_lieferung_Click);
+            // 
+            // btn_zutathinzu
+            // 
+            this.btn_zutathinzu.Location = new System.Drawing.Point(6, 6);
+            this.btn_zutathinzu.Name = "btn_zutathinzu";
+            this.btn_zutathinzu.Size = new System.Drawing.Size(111, 23);
+            this.btn_zutathinzu.TabIndex = 0;
+            this.btn_zutathinzu.Text = "Zutat hinzufügen";
+            this.btn_zutathinzu.UseVisualStyleBackColor = true;
+            this.btn_zutathinzu.Click += new System.EventHandler(this.btn_zutathinzu_Click);
+            // 
             // tabPage_lieferanten
             // 
+            this.tabPage_lieferanten.Controls.Add(this.btn_werliefertwas);
+            this.tabPage_lieferanten.Controls.Add(this.btn_lieferantenentf);
+            this.tabPage_lieferanten.Controls.Add(this.btn_lieferanthinzu);
             this.tabPage_lieferanten.Location = new System.Drawing.Point(4, 22);
             this.tabPage_lieferanten.Name = "tabPage_lieferanten";
             this.tabPage_lieferanten.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_lieferanten.Size = new System.Drawing.Size(1170, 54);
+            this.tabPage_lieferanten.Size = new System.Drawing.Size(1186, 54);
             this.tabPage_lieferanten.TabIndex = 3;
             this.tabPage_lieferanten.Text = "Lieferanten";
             this.tabPage_lieferanten.UseVisualStyleBackColor = true;
             // 
             // btn_rezepte
             // 
-            this.btn_rezepte.Location = new System.Drawing.Point(12, 423);
+            this.btn_rezepte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_rezepte.Location = new System.Drawing.Point(15, 483);
             this.btn_rezepte.Name = "btn_rezepte";
             this.btn_rezepte.Size = new System.Drawing.Size(75, 23);
             this.btn_rezepte.TabIndex = 4;
-            this.btn_rezepte.Text = "Rezepte";
+            this.btn_rezepte.Text = "Rezepte (↺)";
             this.btn_rezepte.UseVisualStyleBackColor = true;
             this.btn_rezepte.Click += new System.EventHandler(this.btn_rezepte_Click);
             // 
             // btn_lager
             // 
-            this.btn_lager.Location = new System.Drawing.Point(93, 423);
+            this.btn_lager.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_lager.Location = new System.Drawing.Point(93, 483);
             this.btn_lager.Name = "btn_lager";
             this.btn_lager.Size = new System.Drawing.Size(75, 23);
             this.btn_lager.TabIndex = 5;
-            this.btn_lager.Text = "Lager";
+            this.btn_lager.Text = "Lager (↺) ";
             this.btn_lager.UseVisualStyleBackColor = true;
             this.btn_lager.Click += new System.EventHandler(this.btn_lager_Click);
             // 
             // btn_lieferanten
             // 
-            this.btn_lieferanten.Location = new System.Drawing.Point(174, 423);
+            this.btn_lieferanten.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_lieferanten.Location = new System.Drawing.Point(174, 483);
             this.btn_lieferanten.Name = "btn_lieferanten";
-            this.btn_lieferanten.Size = new System.Drawing.Size(75, 23);
+            this.btn_lieferanten.Size = new System.Drawing.Size(86, 23);
             this.btn_lieferanten.TabIndex = 6;
-            this.btn_lieferanten.Text = "Lieferanten";
+            this.btn_lieferanten.Text = "Lieferanten (↺)";
             this.btn_lieferanten.UseVisualStyleBackColor = true;
             this.btn_lieferanten.Click += new System.EventHandler(this.btn_lieferanten_Click);
             // 
             // btn_test_1
             // 
-            this.btn_test_1.Location = new System.Drawing.Point(347, 423);
+            this.btn_test_1.Location = new System.Drawing.Point(968, 23);
             this.btn_test_1.Name = "btn_test_1";
             this.btn_test_1.Size = new System.Drawing.Size(75, 23);
             this.btn_test_1.TabIndex = 7;
@@ -275,58 +335,59 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(788, 48);
+            this.label3.Location = new System.Drawing.Point(673, 48);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(28, 13);
             this.label3.TabIndex = 10;
             this.label3.Text = "Info:";
             // 
-            // btn_zutatenzurezepthinzu
+            // btn_bestellen
             // 
-            this.btn_zutatenzurezepthinzu.Location = new System.Drawing.Point(395, 6);
-            this.btn_zutatenzurezepthinzu.Name = "btn_zutatenzurezepthinzu";
-            this.btn_zutatenzurezepthinzu.Size = new System.Drawing.Size(154, 23);
-            this.btn_zutatenzurezepthinzu.TabIndex = 3;
-            this.btn_zutatenzurezepthinzu.Text = "Zutat zu Rezept hinzufügen";
-            this.btn_zutatenzurezepthinzu.UseVisualStyleBackColor = true;
-            this.btn_zutatenzurezepthinzu.Click += new System.EventHandler(this.btn_zutatenzurezepthinzu_Click);
+            this.btn_bestellen.Location = new System.Drawing.Point(350, 6);
+            this.btn_bestellen.Name = "btn_bestellen";
+            this.btn_bestellen.Size = new System.Drawing.Size(183, 23);
+            this.btn_bestellen.TabIndex = 2;
+            this.btn_bestellen.Text = "Zu bestellende Produkte anzeigen";
+            this.btn_bestellen.UseVisualStyleBackColor = true;
+            this.btn_bestellen.Click += new System.EventHandler(this.btn_bestellen_Click);
             // 
-            // btn_zutatausrezeptentf
+            // btn_lieferanthinzu
             // 
-            this.btn_zutatausrezeptentf.Location = new System.Drawing.Point(556, 5);
-            this.btn_zutatausrezeptentf.Name = "btn_zutatausrezeptentf";
-            this.btn_zutatausrezeptentf.Size = new System.Drawing.Size(162, 23);
-            this.btn_zutatausrezeptentf.TabIndex = 4;
-            this.btn_zutatausrezeptentf.Text = "Zutaten aus Rezept entfernen";
-            this.btn_zutatausrezeptentf.UseVisualStyleBackColor = true;
-            this.btn_zutatausrezeptentf.Click += new System.EventHandler(this.btn_zutatausrezeptentf_Click);
+            this.btn_lieferanthinzu.Location = new System.Drawing.Point(6, 6);
+            this.btn_lieferanthinzu.Name = "btn_lieferanthinzu";
+            this.btn_lieferanthinzu.Size = new System.Drawing.Size(136, 23);
+            this.btn_lieferanthinzu.TabIndex = 0;
+            this.btn_lieferanthinzu.Text = "Lieferant hinzufügen";
+            this.btn_lieferanthinzu.UseVisualStyleBackColor = true;
+            this.btn_lieferanthinzu.Click += new System.EventHandler(this.btn_lieferanthinzu_Click);
             // 
-            // btn_zutathinzu
+            // btn_lieferantenentf
             // 
-            this.btn_zutathinzu.Location = new System.Drawing.Point(6, 6);
-            this.btn_zutathinzu.Name = "btn_zutathinzu";
-            this.btn_zutathinzu.Size = new System.Drawing.Size(111, 23);
-            this.btn_zutathinzu.TabIndex = 0;
-            this.btn_zutathinzu.Text = "Zutat hinzufügen";
-            this.btn_zutathinzu.UseVisualStyleBackColor = true;
-            this.btn_zutathinzu.Click += new System.EventHandler(this.btn_zutathinzu_Click);
+            this.btn_lieferantenentf.Location = new System.Drawing.Point(148, 6);
+            this.btn_lieferantenentf.Name = "btn_lieferantenentf";
+            this.btn_lieferantenentf.Size = new System.Drawing.Size(108, 23);
+            this.btn_lieferantenentf.TabIndex = 1;
+            this.btn_lieferantenentf.Text = "Lieferant entfernen";
+            this.btn_lieferantenentf.UseVisualStyleBackColor = true;
+            this.btn_lieferantenentf.Click += new System.EventHandler(this.btn_lieferantenentf_Click);
             // 
-            // btn_lieferung
+            // btn_werliefertwas
             // 
-            this.btn_lieferung.Location = new System.Drawing.Point(123, 6);
-            this.btn_lieferung.Name = "btn_lieferung";
-            this.btn_lieferung.Size = new System.Drawing.Size(174, 23);
-            this.btn_lieferung.TabIndex = 1;
-            this.btn_lieferung.Text = "Lieferung für ausgewählte Zutat hinzufügen";
-            this.btn_lieferung.UseVisualStyleBackColor = true;
-            this.btn_lieferung.Click += new System.EventHandler(this.btn_lieferung_Click);
+            this.btn_werliefertwas.Location = new System.Drawing.Point(262, 6);
+            this.btn_werliefertwas.Name = "btn_werliefertwas";
+            this.btn_werliefertwas.Size = new System.Drawing.Size(178, 23);
+            this.btn_werliefertwas.TabIndex = 2;
+            this.btn_werliefertwas.Text = "wer liefert eine bestimmte Zutat";
+            this.btn_werliefertwas.UseVisualStyleBackColor = true;
+            this.btn_werliefertwas.Click += new System.EventHandler(this.btn_werliefertwas_Click);
             // 
             // mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1202, 544);
+            this.ClientSize = new System.Drawing.Size(1194, 592);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -346,6 +407,7 @@
             this.tabPage_rezepte.ResumeLayout(false);
             this.tabPagebk.ResumeLayout(false);
             this.tabPage_lager.ResumeLayout(false);
+            this.tabPage_lieferanten.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -378,6 +440,10 @@
         private System.Windows.Forms.Button btn_zutatausrezeptentf;
         private System.Windows.Forms.Button btn_zutathinzu;
         private System.Windows.Forms.Button btn_lieferung;
+        private System.Windows.Forms.Button btn_bestellen;
+        private System.Windows.Forms.Button btn_lieferanthinzu;
+        private System.Windows.Forms.Button btn_lieferantenentf;
+        private System.Windows.Forms.Button btn_werliefertwas;
     }
 }
 
