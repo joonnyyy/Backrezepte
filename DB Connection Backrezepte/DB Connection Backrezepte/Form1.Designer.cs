@@ -51,11 +51,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btn_zutatenzurezepthinzu = new System.Windows.Forms.Button();
             this.btn_zutatausrezeptentf = new System.Windows.Forms.Button();
+            this.btn_zutathinzu = new System.Windows.Forms.Button();
+            this.btn_lieferung = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage_rezepte.SuspendLayout();
             this.tabPagebk.SuspendLayout();
+            this.tabPage_lager.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -192,6 +195,8 @@
             // 
             // tabPage_lager
             // 
+            this.tabPage_lager.Controls.Add(this.btn_lieferung);
+            this.tabPage_lager.Controls.Add(this.btn_zutathinzu);
             this.tabPage_lager.Location = new System.Drawing.Point(4, 22);
             this.tabPage_lager.Name = "tabPage_lager";
             this.tabPage_lager.Padding = new System.Windows.Forms.Padding(3);
@@ -297,6 +302,26 @@
             this.btn_zutatausrezeptentf.UseVisualStyleBackColor = true;
             this.btn_zutatausrezeptentf.Click += new System.EventHandler(this.btn_zutatausrezeptentf_Click);
             // 
+            // btn_zutathinzu
+            // 
+            this.btn_zutathinzu.Location = new System.Drawing.Point(6, 6);
+            this.btn_zutathinzu.Name = "btn_zutathinzu";
+            this.btn_zutathinzu.Size = new System.Drawing.Size(111, 23);
+            this.btn_zutathinzu.TabIndex = 0;
+            this.btn_zutathinzu.Text = "Zutat hinzufügen";
+            this.btn_zutathinzu.UseVisualStyleBackColor = true;
+            this.btn_zutathinzu.Click += new System.EventHandler(this.btn_zutathinzu_Click);
+            // 
+            // btn_lieferung
+            // 
+            this.btn_lieferung.Location = new System.Drawing.Point(123, 6);
+            this.btn_lieferung.Name = "btn_lieferung";
+            this.btn_lieferung.Size = new System.Drawing.Size(174, 23);
+            this.btn_lieferung.TabIndex = 1;
+            this.btn_lieferung.Text = "Lieferung für ausgewählte Zutat hinzufügen";
+            this.btn_lieferung.UseVisualStyleBackColor = true;
+            this.btn_lieferung.Click += new System.EventHandler(this.btn_lieferung_Click);
+            // 
             // mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -320,6 +345,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage_rezepte.ResumeLayout(false);
             this.tabPagebk.ResumeLayout(false);
+            this.tabPage_lager.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -350,6 +376,8 @@
         private System.Windows.Forms.Button btn_b_mengebrechnen;
         private System.Windows.Forms.Button btn_zutatenzurezepthinzu;
         private System.Windows.Forms.Button btn_zutatausrezeptentf;
+        private System.Windows.Forms.Button btn_zutathinzu;
+        private System.Windows.Forms.Button btn_lieferung;
     }
 }
 

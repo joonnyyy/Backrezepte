@@ -40,7 +40,7 @@ namespace DB_Connection_Backrezepte
 
         private void mainform_Load(object sender, EventArgs e)
         {
-     
+            btn_test_1.Visible = false;
             loginform lf = new loginform();
             lf.ShowDialog();
             removealltp();
@@ -260,8 +260,27 @@ namespace DB_Connection_Backrezepte
 
             if (zutat != "")
             {
-                runcmd("delete from bestehtaus where rnr = " + nr + " znr = " +zutat);
+                runcmd("delete from bestehtaus where rnr = " + nr + " and znr = " +zutat);
             }
+
+        }
+
+        private void btn_zutathinzu_Click(object sender, EventArgs e)
+        {
+            string nr = Microsoft.VisualBasic.Interaction.InputBox("Geben Sie eine Nummer für die zutat ein:");
+            string name = Microsoft.VisualBasic.Interaction.InputBox("Geben Sie den Namen der Zutat ein:");
+            string mbestand = Microsoft.VisualBasic.Interaction.InputBox("Geben Sie den Gewünschten Meldebestand ein:");
+            if (nr != null && name != null && mbestand != null){
+                runcmd("insert into zutaten values (" + nr + " ,'" + name +  "',0," + mbestand + ")");
+            }
+        }
+
+        private void btn_lieferung_Click(object sender, EventArgs e)
+        {
+            string nr = dataGridView1.SelectedCells[0].Value.ToString();
+            string plusbestand = Microsoft.VisualBasic.Interaction.InputBox("Geben Sie den zusätzlichen Bestand ein:");
+
+            runcmd("update zutaten set bestand = bestand + " + plusbestand + "where znr = " + nr);
 
         }
     }
